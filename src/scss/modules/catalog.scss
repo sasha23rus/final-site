@@ -1,0 +1,30 @@
+.catalog {
+	background: $gray;
+	padding: 30px 0;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 36px;
+		padding: 10px;
+		font-weight: 400;
+	}
+
+	&__description {
+		text-align: center;
+		width: 80%;
+		padding: 10px;
+		margin-bottom: 90px;
+	}
+
+	&__button{
+		margin: 32px auto;
+
+	}
+
+}

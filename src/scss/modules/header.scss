@@ -1,0 +1,45 @@
+.header {
+	background: $gray;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: $small_screen) {
+			justify-content: center;
+			padding: 20px 0;
+		}
+
+	}
+
+	&__menu-wrapper {
+
+		@media screen and (max-width: $small_screen) {
+			width: 100%;
+		}
+	}
+
+
+	&__title {
+
+		@media screen and (max-width: $small_screen) {
+			width: 100%;
+			text-align: center;
+		}
+
+		&__text{
+			font-size: 21px;
+		}
+	}
+
+	//&__button {
+	//
+	//	@media screen and (max-width: $small_screen) {
+	//		width: 100%;
+	//	}
+	//}
+
+}

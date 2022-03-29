@@ -1,0 +1,11 @@
+.footer {
+  background: $darkgray;
+  padding: 21px;
+
+  &__wrapper {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
