@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'learn2' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<?/*<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -57,3 +57,25 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+    */?>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__title">
+                    <p class="header__title__text">Site Title</p>
+                </div>
+                <div class="header__menu-wrapper">
+                    <ul class="header-menu">
+                        <li class="header-menu__item"><a href="#">Item 1</a></li>
+                        <li class="header-menu__item"><a href="#">Item 2</a></li>
+                        <li class="header-menu__item"><a href="#">Item 3</a></li>
+                        <li class="header-menu__item header-menu__item_active"><a href="#">Item 4</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn_primary header__button">Contact Us</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-main">
