@@ -11,22 +11,27 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'learn2' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'learn2' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'learn2' ), 'learn2', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- #site-main -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__menu-wrapper">
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
+                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
+                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
+                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__copyright">
+                    Copyright © 2022
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <?php wp_footer(); ?>
 
