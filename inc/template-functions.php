@@ -35,3 +35,16 @@ function learn2_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'learn2_pingback_header' );
+
+/**
+ * Добавим класс для li в меню
+ */
+function addClassLiHeaderMenu($classes, $item){
+    $classes[] = 'header-menu__item';
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'header-menu__item_active ';
+    }
+//    var_dump($item);
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'addClassLiHeaderMenu', 10, 2 );
