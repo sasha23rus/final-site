@@ -49,7 +49,9 @@ function learn2_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'learn2' ),
+			'menu-header' => esc_html__( 'Header', 'learn2' ),
+			'menu-footer' => esc_html__( 'Footer', 'learn2' ),
+
 		)
 	);
 
