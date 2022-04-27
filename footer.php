@@ -17,17 +17,19 @@
         <div class="container">
             <div class="footer__wrapper">
 
-                <div class="footer__menu-wrapper">
-                    <ul class="footer-menu">
-                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
-                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
-                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
-                        <li class="footer-menu__item"><a href="#">Menu Item</a></li>
-                    </ul>
-                </div>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'  => 'menu-footer',
+                        'menu_id'         => 'footer-menu',
+                        'menu_class'      => 'footer-menu',
+                        'container_class' => 'footer-menu-wrapper',
+                    )
+                );
+                ?>
 
                 <div class="footer__copyright">
-                    Copyright © 2022
+                    <?php echo esc_html( get_theme_mod( 'copyright' ) ); ?> © <?php echo esc_html( date('Y') ); ?>
                 </div>
             </div>
         </div>

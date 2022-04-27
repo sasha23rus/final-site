@@ -1,0 +1,8 @@
+*1. header меню
+*2. logo title ()
+*3. footer menu
+*4. менять копирайт в админке. дата автоматом (customizer)
+
+
+git config --global -add safe.directory /home/sasha23rus/www/wp-learn.local/wp-content/themes/learn2
+
