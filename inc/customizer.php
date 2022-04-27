@@ -59,3 +59,54 @@ function learn2_customize_preview_js() {
 	wp_enqueue_script( 'learn2-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'learn2_customize_preview_js' );
+
+/**
+ * Footer customizer
+ */
+function custom_customizer_addition( $wp_customize ) {
+
+	$wp_customize->add_panel(
+		'custom_settings',
+		array(
+			'priority'       => 2,
+			'capability'     => 'edit_theme_options',
+			'description'    => __( 'Settings', 'learn' ),
+			'theme_supports' => '',
+			'title'          => __( 'Settings', 'learn' ),
+		)
+	);
+
+	// footer section
+	$wp_customize->add_section(
+		'footer_section',
+		array(
+			'title'    => __( 'Footer', 'learn' ),
+			'priority' => 10,
+			'panel'    => 'custom_settings',
+		)
+	);
+
+	/**
+	 * Copyright
+	 */
+	$setting = 'copyright';
+	$wp_customize->add_setting(
+		$setting,
+		array(
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control(
+		$setting,
+		array(
+			'section'  => 'footer_section',
+			'label'    => __( 'Copyright text', 'learn' ),
+			'type'     => 'text',
+		)
+	);
+
+}
+
+add_action( 'customize_register', 'custom_customizer_addition' );
